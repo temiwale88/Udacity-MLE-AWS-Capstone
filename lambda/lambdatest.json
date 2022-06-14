@@ -1,0 +1,15 @@
+{ "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/5d/Italian_Greyhound_standing_gray_%28cropped%29.jpg/1200px-Italian_Greyhound_standing_gray_%28cropped%29.jpg" }
+
+"""Response (without json.dumps(final_response))
+{
+    "statusCode": 200,
+    "headers": {
+      "Content-Type": "text/plain",
+      "Access-Control-Allow-Origin": "*"
+    },
+    "type-result": "<class 'str'>",
+    "Content-Type-In": "<__main__.LambdaContext object at 0x7ff2bc971b20>",
+    "body": {
+      "predicted_dog": "Italian greyhound"
+    }
+  }"""
