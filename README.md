@@ -25,13 +25,13 @@ The habitat is looking for an easier way to allow residents of Tacoma, Washingto
   - We gave the lambda function the necessary permissions to access S3 bucket e.g. for accessing our dog labels for each prediction
   - In a nutshell, the lambda function calls the Sagemaker model endpoint, makes predictions, and we extract top two dog predictions
 - We wrap our Lambda function behind a publicly accessible API gateway
-- We test our API locally on our PC in a jupyter notebook and another way using Postman. 
+- We test our API locally on our PC in a jupyter notebook and another way using Postman.
 - We move the API code into a Streamlit app and deploy it locally on our PC
 - Then we move the app to an AWS EC2 (t2 micro) free-tier instance that will make the Streamlit app publicly accessible. 
 
 ### Some Gotchas
 
-- If you use boto3.client() method in your streamlit app logic, then on your local computer you need to have configured your AWS Access key ID and	Secret access key using aws-cli
+- If you use boto3.client() method in your streamlit app logic, then on your local computer you need to have configured your AWS Access key ID andSecret access key using aws-cli
 - Similarly, you need to do something similar for your EC2 machine so you'll encounter no errors when booting the streamlit app.
 - Lastly, streamlit needs you to declare a PATH variable on your EC2 Ubuntu instance. So be sure to add this `/home/ubuntu/.local/bin`as a PATH variable before you `streamlit run app.py`. Also **ensure** to add it permanently into bash by following the `echo ... ~/.bashrc` command Rahul Ag. outlined in his Medium post - see 'Streamlit on AWS' reference below.
 
@@ -56,10 +56,10 @@ We would like to improve this app in the following ways:
 
 - Security, security, security. We would like to better grant least privilege permisions across every piece of our architecture e.g. assigning an IAM role to the EC2 instance hosting the app
 - Replace the use of boto3.client() method with another Lambda function that separately handles user-uploaded images
-- Beautify our app's UI/UX. 
+- Beautify our app's UI/UX.
 - Improve the accuracy of our model e.g. via tuning and training for more epochs, using a different image classifier other than resnet50, leverage GPU computes for training etc.
 
-See our `project/*` folder for our Lamda tests and streamlit/dog_app.py for our our app logic and references to resources that help me along the way.  
+See the `project/*` folder for necessary files including the Lambda tests and `./streamlit/dog_app.py` for the app logic. They also include references to incredible people and resources that helped me along the way.  
 
 ### References
 
