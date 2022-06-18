@@ -1,3 +1,4 @@
 - Sagemaker: Train and deploy model
 - Lambda: invoke sagemaker endpoint with lambda to access it remotely. Enable lambda URL with 'None' Auth Type to allow for public access. Used this instead of API gateway
     - See here for lambda url tutorial: https://aws.amazon.com/blogs/aws/announcing-aws-lambda-function-urls-built-in-https-endpoints-for-single-function-microservices/
+- To run the streamlit app: while in the streamlit folder space, run streamlit run streamlit.py; ensure that you've used AWS CLI to configure your credentials. 
